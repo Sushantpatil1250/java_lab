@@ -1,0 +1,22 @@
+public class prA_3_que3 {
+
+    static int count;
+
+    static {
+        count = 10;
+        System.out.println("Static block executed");
+    }
+
+    static void showCount() {
+        System.out.println("Count value: " + count);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Main method started");
+
+        prA_3_que3.showCount();
+
+        prA_3_que3.count = 25;
+        prA_3_que3.showCount();
+    }
+}

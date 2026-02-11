@@ -1,0 +1,62 @@
+class Employe
+{
+    private  double  salary;
+    private String firstName;
+    private String lastName;
+
+    Employe()
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+    }
+
+    public void setvalues(String Fn , String Ln , int sal )
+    {
+        firstName = Fn;
+        lastName = Ln;
+        salary = sal;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public double getSalary()
+    {
+
+        if ( salary>=0)
+        {
+            double sal  = 0;
+             sal = salary*0.1;
+            salary = salary + sal;
+
+            return salary;
+    }
+    else
+        {
+            return 0;
+        }
+    }
+
+}
+public class pra3_que1
+{
+    public static void main(String[] args) {
+        Employe e = new Employe();
+        Employe e1 = new Employe();
+        e.setvalues("sushant" , "patil", 1000);
+        e1.setvalues("srushti" , "kore", -1001);
+        System.out.println(e.getFirstName());
+        System.out.println(e.getLastName());
+        System.out.println(e.getSalary());
+System.out.println(e1.getFirstName());
+        System.out.println(e1.getLastName());
+        System.out.println(e1.getSalary());
+
+    }
+}

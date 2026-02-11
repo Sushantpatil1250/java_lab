@@ -1,0 +1,61 @@
+class prA_3_que4 {
+
+    int size;
+    int top = -1;
+    int front = 0, rear = -1;
+    int[] stack;
+    int[] queue;
+
+    prA_3_que4(int size) {
+        this.size = size;
+        stack = new int[size];
+        queue = new int[size];
+    }
+
+    void push(int value) {
+        if (top == size - 1) {
+            System.out.println("Stack Overflow");
+        } else {
+            stack[++top] = value;
+            System.out.println("Pushed: " + value);
+        }
+    }
+
+    void pop() {
+        if (top == -1) {
+            System.out.println("Stack Underflow");
+        } else {
+            System.out.println("Popped: " + stack[top--]);
+        }
+    }
+
+    void enqueue(int value) {
+        if (rear == size - 1) {
+            System.out.println("Queue Overflow");
+        } else {
+            queue[++rear] = value;
+            System.out.println("Enqueued: " + value);
+        }
+    }
+
+    void dequeue() {
+        if (front > rear) {
+            System.out.println("Queue Underflow");
+        } else {
+            System.out.println("Dequeued: " + queue[front++]);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        prA_3_que4 sq = new prA_3_que4(5);
+
+        sq.push(10);
+        sq.push(20);
+        sq.pop();
+
+        sq.enqueue(30);
+        sq.enqueue(40);
+        sq.dequeue();
+    }
+}

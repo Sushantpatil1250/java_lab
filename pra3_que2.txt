@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+class Area
+{
+    float length;
+    float breadth;
+
+    Area()
+    {
+        this.length = length;
+        this.breadth = breadth;
+    }
+
+    public void setDim(float length , float breadth)
+    {
+     this.length = length;
+     this.breadth = breadth;
+    }
+    public float getAreaLength()
+    {
+        return length;
+
+    }
+    public float getAreabreadth()
+    {
+        return breadth;
+
+    }
+}
+public class pra_3que2 {
+    public static void main(String[] args) {
+        Area a = new Area();
+        a.setDim(2,2);
+//        System.out.println(" araa of rectangle :" +a.breadth* a.length);
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("enter len:");
+//
+//        float length = sc.nextFloat();
+//        System.out.print("enter bre:");
+//        float breadth = sc.nextFloat();
+//        float x = length * breadth;
+//        System.out.println(x);
+    }
+}
